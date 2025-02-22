@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyser Tweaks Panel</title>
+    <style>
+        body {
+            background-color: black;
+            color: #A020F0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #login {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #A020F0;
+        }
+
+        #panel {
+            display: none;
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #A020F0;
+            width: 90%;
+            max-width: 500px;
+            text-align: left;
+        }
+
+        h2, h3 {
+            color: #A020F0;
+            text-align: center;
+        }
+
+        input[type="password"] {
+            padding: 10px;
+            border: 2px solid #A020F0;
+            background: black;
+            color: white;
+            text-align: center;
+        }
+
+        button {
+            background: black;
+            color: #A020F0;
+            border: 2px solid #A020F0;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #A020F0;
+            color: black;
+        }
+
+        .panel-section {
+            border: 1px solid #A020F0;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="range"] {
+            width: 100%;
+        }
+
+        .status {
+            color: lime;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login">
+        <h2>Nhập mật khẩu để truy cập</h2>
+        <input type="password" id="password" placeholder="Mật khẩu..." />
+        <button onclick="checkPassword()">Xác nhận</button>
+    </div>
+
+    <div id="panel">
+        <h2>🔹 PANEL KYSETWEAKS 🔹</h2>
+        <p>FF GANGSTER 676</p>
+        <p>Device: OnePlus</p>
+        <p>Version: 13</p>
+        <p>Status: <span class="status">Online</span></p>
+
+        <div class="panel-section">
+            <h3>Aim Features</h3>
+            <label><input type="checkbox"> Aimbot</label><br>
+            <label><input type="checkbox"> Aimbock</label><br>
+            <label><input type="checkbox"> Aim Neck</label><br>
+            <label><input type="checkbox"> Aim Head</label><br>
+            <label><input type="checkbox"> Easy Lock</label><br>
+        </div>
+
+        <div class="panel-section">
+            <h3>Accuracy Features</h3>
+            <label><input type="checkbox"> No Recoil</label><br>
+            <label><input type="checkbox"> HeadFov</label><br>
+            <label><input type="checkbox"> Precision</label><br>
+            <label><input type="checkbox"> Aim Legit</label><br>
+        </div>
+
+        <div class="panel-section">
+            <h3>Settings</h3>
+            <label>VMH4X</label>
+            <input type="range" min="0" max="100" value="50"><br>
+
+            <label>AGE REGEDIT</label>
+            <input type="range" min="0" max="100" value="50"><br>
+
+            <label>P'2PX'MS</label>
+            <input type="range" min="0" max="100" value="50"><br>
+
+            <label>SENSI X</label>
+            <input type="range" min="0" max="100" value="50"><br>
+        </div>
+
+        <button onclick="runFunction()">Chạy All Chức Năng</button>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "Kysertweaks") {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("panel").style.display = "block";
+            } else {
+                alert("Sai mật khẩu!");
+            }
+        }
+
+        function runFunction() {
+            alert("🔹 Chạy tất cả chức năng thành công! 🔹");
+        }
+    </script>
+
+</body>
+</html>
